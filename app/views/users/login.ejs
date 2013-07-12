@@ -1,0 +1,19 @@
+<div class="page-header">
+    <h1>Login</h1>
+</div>
+
+<% var form = formFor(post, {action: pathTo.posts(), method: 'POST', id: "post-form", class: 'form-horizontal'}) %>
+<%- form.begin() %>
+<%- errorMessagesFor(post) %>
+	<div class="control-group">
+	   <%- form.label("title", false, {class: "control-label"}) %>
+	   <div class="controls">
+	       <%- form.input("title") %>
+	   </div>
+	</div>
+
+	<div class="form-actions">
+	    <%- form.submit('<i class="icon-ok icon-white"></i> Create post', {class: 'btn btn-primary'}) %> or
+	    <%- linkTo('Cancel', pathTo.posts(), {class: 'btn'}) %>
+	</div>
+<%- form.end() %>
