@@ -1,0 +1,35 @@
+compound> a=Library.hasMany(Book, {as: 'books',  foreignKey: 'bookId'});
+undefined
+
+compound> l=Library.create({name: "Kauhsik"})
+{ name: 'Kauhsik', id: 51dffd6655a8e75226000004 }
+
+compound> l.books
+{ [Function: caller]
+  _scope: { where: { bookId: 51dffd6655a8e75226000004 } },
+  build: [Function: build],
+  create: [Function: create],
+  destroyAll: [Function: destroyAll],
+  find: [Function],
+  destroy: [Function] }
+
+compound> Book.belongsTo(Library, {as: 'library', foreignKey: 'libraryId'});
+undefined
+
+compound> l
+{ name: 'Kauhsik', id: 51dffd6655a8e75226000004 }
+
+compound> b=Book.create({ name: "Something has to be done right now, alright?", author: "Kaushik", libraryId: '51dffd6655a8e75226000004' })
+{ name: 'Something has to be done right now, alright?',
+  author: 'Kaushik',
+  libraryId: 51dffd6655a8e75226000004,
+  id: 51dffdad55a8e75226000005,
+  bookId: undefined }
+
+compound> b.library
+[Function]
+
+compound> b.library()
+51dffd6655a8e75226000004
+
+compound> 
