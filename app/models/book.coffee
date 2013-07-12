@@ -1,2 +1,4 @@
 module.exports = (compound, Book) ->
-  # define Book here
+  @belongsTo Library,
+	  as: "library"
+	  foreignKey: "libraryId"

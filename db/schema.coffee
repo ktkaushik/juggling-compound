@@ -27,3 +27,7 @@ Book = describe 'Book', ->
     property 'author', String
     set 'restPath', pathTo.books
 
+Administrator = describe 'Administrator', ->
+    property 'name', String
+    set 'restPath', pathTo.administrators
+
