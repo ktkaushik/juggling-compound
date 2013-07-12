@@ -12,3 +12,18 @@ User = describe 'User', ->
     property 'twitter', String
     property 'github', String
     set 'restPath', pathTo.users
+
+Blog = describe 'Blog', ->
+    property 'title', String
+    property 'desc', String
+    set 'restPath', pathTo.Blogs
+
+Library = describe 'Library', ->
+    property 'name', String
+    set 'restPath', pathTo.libraries
+
+Book = describe 'Book', ->
+    property 'name', String
+    property 'author', String
+    set 'restPath', pathTo.books
+

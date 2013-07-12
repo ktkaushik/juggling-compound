@@ -1,9 +1,12 @@
 module.exports = 
   development:
-    driver: "memory"
+    driver: "mongodb"
+    url: "mongodb://localhost/dev"
 
   test:
-    driver: "memory"
+    driver: "mongodb"
+    url: "mongodb://localhost/dev"
 
   production:
-    driver: "memory"
+    driver: "mongodb"
+    url: "mongodb://localhost/dev"
