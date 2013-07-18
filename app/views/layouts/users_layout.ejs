@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>test</title>
+        <title><%= title %></title>
         <%- stylesheetLinkTag('bootstrap', 'application', 'bootstrap-responsive') %>
         <%- javascriptIncludeTag('http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', 'bootstrap', 'rails', 'application') %>
-        <meta charset="utf8">
-        <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <%- csrfMetaTag() %>
     </head>
     <body>
         <div class="navbar">
@@ -35,7 +34,7 @@
 
             <hr />
             <footer>
-                <p>&copy; Company <% var d=new Date();%><%= d.getFullYear() %></p>
+                <p>&copy; Company 2012</p>
             </footer>
         </div>
     </body>

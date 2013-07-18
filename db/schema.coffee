@@ -31,3 +31,17 @@ Administrator = describe 'Administrator', ->
     property 'name', String
     set 'restPath', pathTo.administrators
 
+User = describe 'User', ->
+    property 'name', String
+    property 'email', String
+    set 'restPath', pathTo.users
+
+Blog = describe 'Blog', ->
+    property 'name', String
+    property 'email', String
+    set 'restPath', pathTo.Blogs
+
+Article = describe 'Article', ->
+    property 'name', String
+    set 'restPath', pathTo.Articles
+

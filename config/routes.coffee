@@ -1,4 +1,10 @@
 exports.routes = (map)->
+  map.resources 'articles'
+
+  map.resources 'blogs'
+
+  map.resources 'users'
+
   map.resources 'posts'
 
 

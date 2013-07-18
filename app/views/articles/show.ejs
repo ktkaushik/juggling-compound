@@ -1,0 +1,22 @@
+<ul class="breadcrumb">
+    <li><a href="/">Home</a> <span class="divider">/</span></li>
+    <li><a href="<%- pathTo.articles %>">articles</a> <span class="divider">/</span></li>
+    <li class="active"><a href="#">Details of article</a></li>
+</ul>
+
+<div class="page-header">
+    <h1>Details of article</h1>
+</div>
+
+<table class="table table-bordered">
+    <tbody>
+        <tr><th>name</th><td><%= article.name %></td></tr>
+    </tbody>
+</table>
+
+<div class="well">
+    <%- link_to('<i class="icon-edit icon-white"></i> Edit', pathTo.edit_article(article), {class: 'btn btn-primary'}) %>
+    <%- link_to('<i class="icon-remove icon-white"></i> Delete', pathTo.article(article), {class: 'btn btn-danger', method: 'delete', remote: true, jsonp: '(function (u) { location.href = u; })'}) %>
+    or
+    <%- link_to('Back to index', pathTo.articles) %>
+</div>
