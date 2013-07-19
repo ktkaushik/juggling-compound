@@ -4,6 +4,7 @@
 , "main": "server.coffee"
 , "dependencies":
   { "ejs": "*"
+  , "mongodb" : "1.1.11" 
   , "ejs-ext": "latest"
   , "express": "~3.x"
   , "compound": ">= 1.1.0"
