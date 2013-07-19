@@ -1,6 +1,9 @@
 { "name": "juggling-compound"
 , "version": "0.0.1"
-, "engines": ["node >= 0.8.0"]
+, "engines": {
+    "node": "0.8.22",
+    "npm": "1.2.14"
+  }
 , "main": "server.coffee"
 , "dependencies":
   { "ejs": "*"
