@@ -26,7 +26,7 @@
             <tbody>
                 <% articles.forEach(function (article) { %>
                 <tr>
-                    <td><strong><%- link_to('article #' + article.id, pathTo.article(article)) %></strong></td>
+                    <td><strong><%- link_to(article.name, pathTo.article(article)) %></strong></td>
                     <td>
                         <%- link_to('<i class="icon-edit"></i> Edit', pathTo.edit_article(article), {class: 'btn btn-mini'}) %>
                         <%- link_to('<i class="icon-remove icon-white"></i> Delete', pathTo.article(article), {class: 'btn btn-mini btn-danger', method: 'delete', remote: true, jsonp: '(function (u) {location.href = u;})'}) %>
