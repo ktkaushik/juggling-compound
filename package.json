@@ -4,6 +4,7 @@
 , "main": "server.coffee"
 , "dependencies":
   { "ejs": "*"
+  , "yaml": "*"
   , "mongodb" : "1.1.11" 
   , "ejs-ext": "latest"
   , "express": "~3.x"
@@ -15,6 +16,8 @@
   , "stylus": "latest"
   , "seedjs": "latest"
   , "passport": "latest"
+  , "passport-local": "latest"
+  , "compound-passport": "latest"
   , "co-assets-compiler": "*"
   },
   "devDependencies":
