@@ -7,8 +7,6 @@ before 'load Article', ->
         return send code: 404, error: 'Not found'
       redirect pathTo.articles
     else
-      # console.log "******************************************* article found ***********************************************"
-      # console.log Article
       @Article = Article
       @article = Article
       next()
@@ -72,13 +70,10 @@ action 'update', ->
         else
           send code: 200, data: @Article
       format.html =>
-        # console.log "************************* in html respond ***************************"
         if !err
-          # console.log "************************* no err in html ***************************"
           flash 'info', 'Article updated'
           redirect path_to.article(@Article)
         else
-          # console.log "************************* err in html ***************************"
           flash 'error', 'Article can not be updated'
           @title = 'Edit Article details'
           render 'edit'

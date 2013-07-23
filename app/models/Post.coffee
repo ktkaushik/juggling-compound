@@ -1,2 +1,4 @@
 module.exports = (compound, Post) ->
-  # define Post here
+  # Post.belongsTo Article,
+  #   as: "post"
+  #   foreignKey: "postId"
